@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>نادي الشباب السعودي | الموقع الرسمي</title>
+<meta name="description" content="الموقع الرسمي لنادي الشباب السعودي - الأخبار، المباريات، الترتيب، تشكيلة الفريق للموسم 2026-2027">
+<link rel="icon" href="images/logo.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- ===== Top bar ===== -->
+  <div class="topbar">
+    <span class="lang">AR</span>
+    <div class="crest"><img src="images/logo.jpg" alt="شعار نادي الشباب"></div>
+  </div>
+  <div class="promo-strip" id="promoStrip">
+    <span>الموسم 2026/2027 · دوري روشن السعودي للمحترفين</span>
+    <button id="closePromo" aria-label="إغلاق">×</button>
+  </div>
+
+  <!-- ================= HOME ================= -->
+  <section class="screen active" id="screen-home">
+    <div class="hero-card">
+      <img src="images/banner.jpg" alt="نادي الشباب السعودي">
+      <div class="hero-fade"></div>
+      <div class="hero-txt">
+        <span>يلا شباب</span>
+        <h2>الليث الأبيض .. عراقة منذ 1947</h2>
+      </div>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-pill"><strong>1947</strong><span>التأسيس</span></div>
+      <div class="stat-pill"><strong>6</strong><span>ألقاب الدوري</span></div>
+      <div class="stat-pill"><strong>SHG</strong><span>أرينا</span></div>
+      <div class="stat-pill"><strong>20</strong><span>لاعبًا</span></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <h3>جدول الترتيب</h3>
+        <a href="#" data-nav="matches">المباريات ›</a>
+      </div>
+      <table class="standings-table" id="standingsTable">
+        <thead>
+          <tr><th>الفريق</th><th>لعب</th><th>فاز</th><th>خسر</th><th>نقاط</th></tr>
+        </thead>
+        <tbody id="standingsBody"></tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">
+        <h3>آخر الأخبار</h3>
+        <a href="#" data-nav="news">الكل ›</a>
+      </div>
+      <div id="homeNews"></div>
+    </div>
+  </section>
+
+  <!-- ================= MATCHES ================= -->
+  <section class="screen" id="screen-matches">
+    <div class="screen-head">
+      <h1>جدول المباريات</h1>
+      <p>تُعرض بيانات حية إذا كان السيرفر الوسيط (backend) يعمل، وإلا بيانات تجريبية محلية</p>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="fixturesPanel">قادمة</button>
+      <button class="tab-btn" data-tab="resultsPanel">انتهت</button>
+    </div>
+
+    <div class="tab-panel active" id="fixturesPanel"></div>
+    <div class="tab-panel" id="resultsPanel"></div>
+  </section>
+
+  <!-- ================= SQUAD ================= -->
+  <section class="screen" id="screen-squad">
+    <div class="screen-head">
+      <h1>الفريق الأول</h1>
+      <p id="squadSubtitle">قائمة اللاعبين للموسم الحالي</p>
+    </div>
+
+    <input type="text" class="squad-search" id="squadSearch" placeholder="ابحث عن لاعب...">
+
+    <div class="chips" id="squadFilters">
+      <button class="chip active" data-group="all">الكل</button>
+      <button class="chip" data-group="حراس مرمى">حراس المرمى</button>
+      <button class="chip" data-group="الدفاع">الدفاع</button>
+      <button class="chip" data-group="الوسط">الوسط</button>
+      <button class="chip" data-group="الهجوم">الهجوم</button>
+    </div>
+
+    <div class="card coach-card" id="coachCard"></div>
+
+    <div id="squadContainer"></div>
+  </section>
+
+  <!-- ================= TRANSFERS ================= -->
+  <section class="screen" id="screen-transfers">
+    <div class="screen-head">
+      <h1>الانتقالات</h1>
+      <p>القادمون والمغادرون في سوق الانتقالات</p>
+    </div>
+
+    <div class="transfer-tabs">
+      <button class="tab-btn active" data-ttab="inPanel">قادمون</button>
+      <button class="tab-btn" data-ttab="outPanel">مغادرون</button>
+    </div>
+
+    <div class="tab-panel active" id="inPanel"></div>
+    <div class="tab-panel" id="outPanel"></div>
+  </section>
+
+  <!-- ================= NEWS ================= -->
+  <section class="screen" id="screen-news">
+    <div class="screen-head">
+      <h1>الأخبار</h1>
+      <p>آخر أخبار نادي الشباب السعودي</p>
+    </div>
+    <div id="newsContainer"></div>
+  </section>
+
+  <!-- ================= CLUB (About + History + Gallery) ================= -->
+  <section class="screen" id="screen-club">
+    <div class="screen-head">
+      <h1>النادي</h1>
+      <p>عن نادي الشباب وتاريخه العريق</p>
+    </div>
+
+    <div class="card about-text">
+      <p>نادي الشباب السعودي هو أحد أعرق الأندية الرياضية في المملكة العربية السعودية، ومقره مدينة الرياض. تأسس النادي عام 1947م باسم "نادي شباب الرياض"، وتغيّر الاسم إلى "نادي الشباب" عام 1967م. يُعرف النادي بلقب <strong>"الليث الأبيض"</strong>.</p>
+      <p>يلعب الفريق مبارياته في استاد <strong>SHG أرينا</strong> بحي الصحافة شمال الرياض، ويتسع الملعب لأكثر من 13,000 متفرج.</p>
+    </div>
+
+    <div class="honor-grid" id="honorGrid"></div>
+
+    <div class="card">
+      <div class="card-title"><h3>البطولات والألقاب</h3></div>
+      <div id="honorsList"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><h3>الأولويات التاريخية</h3></div>
+      <div id="milestonesList"></div>
+    </div>
+
+    <div class="card-title" style="margin: 20px 4px 12px;"><h3>معرض الصور</h3></div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </section>
+
+  <!-- ===== Bottom nav ===== -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" data-nav="home">
+      <svg viewBox="0 0 24 24"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+      الرئيسية
+    </button>
+    <button class="nav-item" data-nav="matches">
+      <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+      المباريات
+    </button>
+    <button class="nav-item" data-nav="squad">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg>
+      الفريق
+    </button>
+    <button class="nav-item" data-nav="transfers">
+      <svg viewBox="0 0 24 24"><path d="M7 7h11l-3-3M17 17H6l3 3"/></svg>
+      الانتقالات
+    </button>
+    <button class="nav-item" data-nav="club">
+      <svg viewBox="0 0 24 24"><path d="M12 3 3 8l9 5 9-5-9-5Z"/><path d="M3 8v8l9 5 9-5V8"/></svg>
+      النادي
+    </button>
+  </nav>
+
+</div>
+
+<script src="js/players.js"></script>
+<script src="js/matches.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

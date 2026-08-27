@@ -1,0 +1,5 @@
+# ضعه في جذر المشروع (نفس مستوى index.html)
+
+[build]
+  functions = "netlify/functions"
+  publish = "."

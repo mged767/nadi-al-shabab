@@ -1,0 +1,10 @@
+@media (min-width: 481px) {
+  .app { border-inline: 1px solid var(--border); box-shadow: 0 0 60px rgba(0,0,0,.5); }
+  body { background: #050505; }
+}
+
+@media (max-width: 360px) {
+  .squad-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stat-row { gap: 6px; }
+  .honor-grid { gap: 6px; }
+}

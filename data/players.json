@@ -1,0 +1,33 @@
+{
+  "season": "2026-2027",
+  "coach": {
+    "name": "توماس ليتش",
+    "nationality": "ألمانيا",
+    "photo": "images/players/coach-letsch.jpg"
+  },
+  "players": [
+    { "number": 33, "name": "محمد المحاسنة", "position": "حارس مرمى", "group": "حراس مرمى", "nationality": "SA", "photo": "images/players/al-mahasnah.jpg", "starter": true },
+    { "number": 23, "name": "عبدالعزيز العويرضي", "position": "حارس مرمى", "group": "حراس مرمى", "nationality": "SA", "photo": "", "starter": false },
+
+    { "number": 3, "name": "مامادو باري", "position": "قلب دفاع", "group": "الدفاع", "nationality": "SN", "photo": "images/players/mamadou-bary.jpg", "starter": true },
+    { "number": 4, "name": "تين يدفاي", "position": "قلب دفاع", "group": "الدفاع", "nationality": "NL", "photo": "images/players/teun-wijdeveld.jpg", "starter": true },
+    { "number": 21, "name": "ضاري العنزي", "position": "ظهير", "group": "الدفاع", "nationality": "SA", "photo": "images/players/dari-alanzi.jpg", "starter": true },
+    { "number": 17, "name": "محمد الثاني", "position": "ظهير", "group": "الدفاع", "nationality": "SA", "photo": "images/players/mohammed-althani.jpg", "starter": true },
+    { "number": 5, "name": "علي مكي", "position": "قلب دفاع", "group": "الدفاع", "nationality": "SA", "photo": "", "starter": false },
+    { "number": 15, "name": "لازار ستويانوفيتش", "position": "قلب دفاع", "group": "الدفاع", "nationality": "RS", "photo": "", "starter": false },
+    { "number": 16, "name": "حسين صبياني", "position": "ظهير", "group": "الدفاع", "nationality": "SA", "photo": "", "starter": false },
+    { "number": 40, "name": "علي الأسمري", "position": "ظهير", "group": "الدفاع", "nationality": "SA", "photo": "images/players/ali-alasmari.jpg", "starter": false },
+
+    { "number": 10, "name": "يانيك كاراسكو", "position": "خط الوسط", "group": "الوسط", "nationality": "BE", "photo": "images/players/carrasco.jpg", "starter": true, "captain": true },
+    { "number": 29, "name": "ياسين عدلي", "position": "خط الوسط", "group": "الوسط", "nationality": "FR", "photo": "images/players/yacine-adli.jpg", "starter": true },
+    { "number": 18, "name": "توماس بارتي", "position": "خط الوسط", "group": "الوسط", "nationality": "GH", "photo": "images/players/thomas-partey.jpg", "starter": true },
+    { "number": 8, "name": "جوش براونهيل", "position": "خط الوسط", "group": "الوسط", "nationality": "GB", "photo": "images/players/josh-brownhill.jpg", "starter": true },
+    { "number": 6, "name": "عوض الناشري", "position": "خط الوسط", "group": "الوسط", "nationality": "SA", "photo": "", "starter": false },
+    { "number": 99, "name": "حمد الخريف", "position": "خط الوسط", "group": "الوسط", "nationality": "SA", "photo": "", "starter": false },
+
+    { "number": 22, "name": "همام الهمامي", "position": "مهاجم", "group": "الهجوم", "nationality": "SA", "photo": "images/players/hammam-alhammami.jpg", "starter": true },
+    { "number": 9, "name": "روجر مارتينيز", "position": "مهاجم", "group": "الهجوم", "nationality": "CO", "photo": "images/players/roger-martinez.jpg", "starter": true },
+    { "number": 37, "name": "عبدالله معتوق", "position": "مهاجم", "group": "الهجوم", "nationality": "SA", "photo": "images/players/abdullah-motawq.jpg", "starter": false },
+    { "number": 77, "name": "هشام آل دبيس", "position": "مهاجم", "group": "الهجوم", "nationality": "SA", "photo": "", "starter": false }
+  ]
+}
